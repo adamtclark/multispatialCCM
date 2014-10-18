@@ -37,7 +37,7 @@ Sugihara, G., R. May, H. Ye, C. Hsieh, E. Deyle, M. Fogarty, and S. Munch. 2012.
 
 Hsieh, C., C. Anderson, and G. Sugihara. 2008. Extending Nonlinear analysis to short ecological time series. American Naturalist 171:71–80.
 
-Clark, A.T., Yi, H., Cowles, J., Deyle, E., Isbell, F., Sugihara, G., Tilman, D. 2014. Spatial 'convergent cross mapping' to detect causal relationships from short time-series. In prep.
+Clark, A.T., Yi, H., Cowles, J., Deyle, E., Isbell, F., Sugihara, G., Tilman, D. 2014. Spatial 'convergent cross mapping' to detect causal relationships from short time-series. In review.
 }
 \seealso{
 CCM_boot, SSR_pred_boot, SSR_check_signal, ccmtest
@@ -98,11 +98,8 @@ CCM_boot_B<-CCM_boot(Bccm, Accm, E_B, tau=1, iterations=100)
 
 #Test for significant causal signal
 #See R function for details
-(CCM_significance_test<-ccmtest(Arm=CCM_boot_A$rho,
-                    Arsd=CCM_boot_A$sdevrho,
-                    Brm=CCM_boot_B$rho,
-                    Brsd=CCM_boot_B$sdevrho,
-                    iter=100, cuts=10))
+(CCM_significance_test<-ccmtest(CCM_boot_A,
+                    CCM_boot_B)
 #Significant causal relationship is detected if both slope and rho
 #tests show p<0.05.
 #Based on our starting random number seed, the test should

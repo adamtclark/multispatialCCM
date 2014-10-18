@@ -5,12 +5,12 @@
 Run multispatial CCM algorithm on two time series
 }
 \description{
-Runs the multispatial convergent cross mapping algorithm on two time series, A and B, to determine whether process A is a forcing process (i.e., causally affects) or process B. A and B do not need to be from single, long time series, but rather can be combinations of many (e.g. spatially-replicated) time series. See "Arguments" for details.
+A parallelized version of multispatial convergent cross mapping algorithm. See CCM_boot for details. Uses doParallel package.
 }
 \usage{
 CCM_boot(A, B, E, tau=1,
 DesiredL=((tau*(E-1)+(E+1)):length(A)-E+2),
-iterations=100)
+iterations=100, nclus=NA)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -31,6 +31,9 @@ Desired library lengths for which to compute CCM. Defaults to the maximum possib
 }
   \item{iterations}{
 Number of iterations for bootstrapping. Defaults to 100.
+  \item{nclus}{
+Number of parallel processers to use. If NA, defaults to number available on the machine.
+  }
 }
 }
 \value{
