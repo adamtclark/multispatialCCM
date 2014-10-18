@@ -99,7 +99,7 @@ CCM_boot_B<-CCM_boot(Bccm, Accm, E_B, tau=1, iterations=100)
 #Test for significant causal signal
 #See R function for details
 (CCM_significance_test<-ccmtest(CCM_boot_A,
-                    CCM_boot_B)
+                    CCM_boot_B))
 #Significant causal relationship is detected if both slope and rho
 #tests show p<0.05.
 #Based on our starting random number seed, the test should

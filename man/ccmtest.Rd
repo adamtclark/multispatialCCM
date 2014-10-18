@@ -8,14 +8,14 @@ Test for significant causal signal
 Tests output from CCM_boot for significant causal signal. This function compares the 95\% confidence intervals for esimated rho for the shortest and longest libraries calculated, and uses this to determine whether predictive power has significantly increased.
 }
 \usage{
-ccmtest(Accm_out, Bccm_out)
+ccmtest(CCM_boot_A, CCM_boot_B)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{Accm_out}{
+  \item{CCM_boot_A}{
 Output structure from a CCM test using CCM_boot
 }
-  \item{Bccm_out}{
+  \item{CCM_boot_B}{
 Output structure from a CCM test using CCM_boot
 }
 }
@@ -60,6 +60,6 @@ CCM_boot_A<-CCM_boot(Accm, Bccm, E_A, tau=1, iterations=100)
 CCM_boot_B<-CCM_boot(Bccm, Accm, E_B, tau=1, iterations=100)
 
 (CCM_significance_test<-ccmtest(CCM_boot_A,
-                   CCM_boot_B)
+                   CCM_boot_B))
 }
 \keyword{ts}
