@@ -55,9 +55,9 @@ E_B<-3
 #tau is the length of time steps used (default is 1)
 #iterations is the number of bootsrap iterations (default 100)
 # Does A "cause" B?
-CCM_boot_A<-CCM_boot(Accm, Bccm, E_A, tau=1, iterations=100)
+CCM_boot_A<-CCM_boot(Accm, Bccm, E_A, tau=1, iterations=10)
 # Does B "cause" A?
-CCM_boot_B<-CCM_boot(Bccm, Accm, E_B, tau=1, iterations=100)
+CCM_boot_B<-CCM_boot(Bccm, Accm, E_B, tau=1, iterations=10)
 
 (CCM_significance_test<-ccmtest(CCM_boot_A,
                    CCM_boot_B))

@@ -1,2 +1,2 @@
-exportPattern(CCM_boot, CCM_boot_par, make_ccm_data, SSR_check_signal, ccmtest, multispatialCCM-internal, SSR_pred_boot)
+exportPattern(CCM_boot, make_ccm_data, SSR_check_signal, ccmtest, multispatialCCM-internal, SSR_pred_boot)
 useDynLib(multispatialCCM)

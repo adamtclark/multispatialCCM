@@ -92,19 +92,15 @@ signal_B_out<-SSR_check_signal(A=Bccm, E=E_B, tau=1,
 #tau is the length of time steps used (default is 1)
 #iterations is the number of bootsrap iterations (default 100)
 # Does A "cause" B?
-CCM_boot_A<-CCM_boot(Accm, Bccm, E_A, tau=1, iterations=100)
+#Note - increase iterations to 100 for consistant results
+CCM_boot_A<-CCM_boot(Accm, Bccm, E_A, tau=1, iterations=10)
 # Does B "cause" A?
-CCM_boot_B<-CCM_boot(Bccm, Accm, E_B, tau=1, iterations=100)
+CCM_boot_B<-CCM_boot(Bccm, Accm, E_B, tau=1, iterations=10)
 
 #Test for significant causal signal
 #See R function for details
 (CCM_significance_test<-ccmtest(CCM_boot_A,
                     CCM_boot_B))
-#Significant causal relationship is detected if both slope and rho
-#tests show p<0.05.
-#Based on our starting random number seed, the test should
-#show a non-significant forcing of B by A (slopeA==0.330, rhoA==0.001)
-#and show a significant forcing of A by B (slopeB==0.000, rhoB==0.000)
 
 #Plot results
 plotxlimits<-range(c(CCM_boot_A$Lobs, CCM_boot_B$Lobs))
