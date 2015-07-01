@@ -37,7 +37,7 @@ Sugihara, G., R. May, H. Ye, C. Hsieh, E. Deyle, M. Fogarty, and S. Munch. 2012.
 
 Hsieh, C., C. Anderson, and G. Sugihara. 2008. Extending Nonlinear analysis to short ecological time series. American Naturalist 171:71–80.
 
-Clark, A.T., Yi, H., Cowles, J., Deyle, E., Isbell, F., Sugihara, G., Tilman, D. 2014. Spatial 'convergent cross mapping' to detect causal relationships from short time-series. In review.
+Adam T. Clark, H. Ye, Forest Isbell, Ethan R. Deyle, Jane Cowles, David Tilman, and George Sugihara. 2015. Spatial ’convergent cross mapping’ to detect causal relationships from short time-series. Ecology, 96(6):1174–1181.
 }
 \seealso{
 CCM_boot, SSR_pred_boot, SSR_check_signal, ccmtest

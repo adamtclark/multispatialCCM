@@ -50,7 +50,7 @@ Set to 1 to match results in Sugihara et al. publication described below, which 
 \references{
 Sugihara, G., R. May, H. Ye, C. Hsieh, E. Deyle, M. Fogarty, and S. Munch. 2012. Detecting Causality in Complex Ecosystems. Science 338.
 
-Clark, A.T., Yi, H., Cowles, J., Deyle, E., Isbell, F., Sugihara, G., Tilman, D. 2014. Spatial 'convergent cross mapping' to detect causal relationships from short time-series. In review.
+Adam T. Clark, H. Ye, Forest Isbell, Ethan R. Deyle, Jane Cowles, David Tilman, and George Sugihara. 2015. Spatial ’convergent cross mapping’ to detect causal relationships from short time-series. Ecology, 96(6):1174–1181.
 }
 \author{
 Adam Clark

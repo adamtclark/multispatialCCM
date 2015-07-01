@@ -16,15 +16,16 @@ function(A, B, E, tau=1, DesiredL=((tau*(E-1)+(E+1)):length(A)-E+2), iterations=
     acceptablelib<-acceptablelib*as.numeric(is.finite(c(rep(NA, i),A[-c((lA-i+1):lA)])))
   }
   acceptablelib<-which(acceptablelib>0)-1 #Convert into positions in C array
-  #acceptablelib<-acceptablelib[acceptablelib<((plengtht-1)-(tau))]
+  acceptablelib<-acceptablelib[acceptablelib<=((plengtht-1))]
+  acceptablelib2<-acceptablelib[acceptablelib<((plengtht-1)-(tau))]
   lengthacceptablelib<-length(acceptablelib)
   
   DesiredL<-DesiredL+E-2 #Convert to positions in C array
   
   for(i in 1:length(DesiredL)) { #Load nearby points from acceptablelib vector
-    DesiredL[i]<-acceptablelib[which.min(abs(acceptablelib-DesiredL[i]))] 
+    DesiredL[i]<-acceptablelib2[which.min(abs(acceptablelib2-DesiredL[i]))] 
   }
-  DesiredL<-DesiredL[DesiredL<=((plengtht-1)-(tau))]
+  #DesiredL<-DesiredL[DesiredL<((plengtht-1)-(tau))]
   DesiredL<-unique(DesiredL)
   # Update input to match actual indices
   A[is.na(A)]<-0; B[is.na(B)]<-0 #Make vectors "C safe"
