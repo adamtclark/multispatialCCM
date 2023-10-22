@@ -9,13 +9,6 @@ multispatial convergent cross mapping analysis
 A package for conducting convergent cross mapping (CCM) tests for causal relations for short, replicated time series. This package contains functions for implementing CCM on replicated data, as well as testing for significance of causal relationships that are detected. This package can also be used to implement state space reconstruction on replicated data (dew-drop regression, Hsieh et al.)
 }
 \details{
-\tabular{ll}{
-Package: \tab multispatialCCM\cr
-Type: \tab Package\cr
-Version: \tab 1.0\cr
-Date: \tab 2014-03-19\cr
-License: \tab GPL (>=2)\cr
-}
 The functions in this package can analyze data from multiple replicated time series. To enter the time series into functions, they should be concatenated back-to-back into a single vector, with gaps between time series indicated by "NA".
 
 The package follows the descriptions in Clark et al. There are two classes of functions: analytical, and diagnostic. Both of these should be used for conducting multispatial CCM.

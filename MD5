@@ -1,0 +1,15 @@
+dad2ea774bb77b3e857645fafb0a170a *DESCRIPTION
+c5e8e685135657188c44f6673a727f97 *NAMESPACE
+44ca642c2379aaee2d44a1411ae007fe *R/CCM_boot.R
+a009b9bc25682d3fd0082a38461ffc73 *R/SSR_check_signal.R
+b623b89fde71f45f496aba46e245951e *R/SSR_pred_boot.R
+5edf35b0d6b1786093a335a5026fda45 *R/ccmtest.R
+89e7a8b312eb92e08ae201fa4ba3520e *R/make_ccm_data.R
+ac0286461d9f3e6b9cd7e515a600d056 *man/CCM_boot.Rd
+d8bbc2e45d83b37e498babc467d86488 *man/SSR_check_signal.Rd
+219c976d66309f1b34ba394a2eda64ef *man/SSR_pred_boot.Rd
+41cf2d0ee4fed08e6861997d93e773eb *man/ccmtest.Rd
+63b3014da9bba2bfd34c50f4079ac775 *man/make_ccm_data.Rd
+4305e4f982a16644608a1f42766ff2a4 *man/multispatialCCM-package.Rd
+746cff67d3be19c28e48281ba596650f *src/CCM_bootstrap.c
+8d7c9c6f98040b6da4baaba5e4838986 *src/SSR_predict_boot.c
